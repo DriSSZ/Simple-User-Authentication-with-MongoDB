@@ -4,12 +4,12 @@ error_reporting(E_ALL);
 try
 {
   $m    = new Mongo();
-  $db   = $m->test;
+  $db   = $m->db;
   $coll = $db->users;
 }
 catch (MongoConnectionException $e)
 {
-  die('Error connecting to MongoDB server');
+  die('Error connecting to MongoDB');
 } 
 catch (MongoException $e) {
   die('Error: ' . $e->getMessage());
