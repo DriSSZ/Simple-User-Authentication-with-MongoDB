@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 try
 {
   $m    = new Mongo();
-  $db   = $m->db;
+  $db   = $m->emu;
   $coll = $db->users;
 }
 catch (MongoConnectionException $e)
